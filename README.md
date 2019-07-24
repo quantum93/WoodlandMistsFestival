@@ -24,6 +24,7 @@ Start with unit tests and get all tests passing before starting on integration t
 | ------------- |:-------------:| ------:|
 | making class of stage and artist  |
 | making class of stage and artist  |
+| write layout page (layout.erb)  |
 
 
 
