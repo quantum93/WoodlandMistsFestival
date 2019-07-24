@@ -30,4 +30,8 @@ class Stage
     self.artist = artist
     @@stages[self.id] = Stage.new(self.name, self.artist, self.id)
   end
+
+  def artists
+    Artist.find_by_artist(self.id)
+  end
 end
