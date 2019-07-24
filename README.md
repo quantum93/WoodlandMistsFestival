@@ -26,6 +26,8 @@ Start with unit tests and get all tests passing before starting on integration t
 | making class of stage and artist  |
 | write layout page (layout.erb)  |
 | CRUD functionality with app.rb |
+| setup rspec test with festi_spec.rb|
+|
 
 
 

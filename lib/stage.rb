@@ -16,9 +16,23 @@ class Stage
     @@stages.values()
   end
 
+  def self.clear # it works with spec files before(:each) routine.
+    @@stages = {}
+    @@total_rows = 0
+  end
+
+  def self.find(id) # it works with 5th spec test of festival_spec files
+    @@stages[id]
+  end
+
+  def == (stage_to_compare) # it works with second test of festival_spec files
+    self.name() == stage_to_compare.name()
+    self.artist() == stage_to_compare.artist()
+  end
+
   def create
     @@stages[self.id] = Stage.new(self.name, self.artist, self.id)
-    Stage.sort
+    # Stage.sort
   end
 
   def delete
