@@ -34,7 +34,7 @@ describe '#Stage' do
   describe('.clear') do
       it("clears all stages") do
         stage = Stage.new("Epic Hall one", "Ben", nil)
-               stage2 = Stage.new("Epic Hall two","Ben", nil)
+        stage2 = Stage.new("Epic Hall two","Ben", nil)
         stage2.create()
         Stage.clear()
         expect(Stage.all).to(eq([]))

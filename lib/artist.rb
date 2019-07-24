@@ -16,6 +16,18 @@ class Artist
     @@artists.values
   end
 
+  def ==(artist_to_compare)
+    (self.name() == artist_to_compare.name()) && (self.stage_id() == artist_to_compare.stage_id())
+  end
+
+  def self.clear
+    @@artists = {}
+  end
+
+  def self.find(id)
+    @@artists[id]
+  end
+
   def create
     @@artists[self.id] = Artist.new(self.name, self.stage_id, self.id)
   end
