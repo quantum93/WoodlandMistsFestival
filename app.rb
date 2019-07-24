@@ -23,7 +23,7 @@ post ('/stages') do
   name = params[:stage_name]
   artist = params[:stage_artist]
   stage = Stage.new(name, artist, nil)
-  stage.save()
+  stage.create()
   @stages = Stage.all()
   erb(:stages)
 end

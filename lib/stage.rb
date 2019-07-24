@@ -3,7 +3,7 @@ require('pry')
 class Stage
   attr_reader :id
   attr_accessor :name, :artist
-  @@statges = {}
+  @@stages = {}
   @@total_rows = 0
 
   def initialize(name, artist, id)
@@ -46,6 +46,6 @@ class Stage
   end
 
   def artists
-    Artist.find_by_artist(self.id)
+    Artist.find_by_stage(self.id)
   end
 end
