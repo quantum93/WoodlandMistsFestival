@@ -22,7 +22,8 @@ Start with unit tests and get all tests passing before starting on integration t
 ## Specs
 | Behavior      | Input         | Output |
 | ------------- |:-------------:| ------:|
-| making class of state and artist  |
+| making class of stage and artist  |
+| making class of stage and artist  |
 
 
 
