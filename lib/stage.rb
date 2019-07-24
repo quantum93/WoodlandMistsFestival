@@ -31,8 +31,18 @@ class Stage
   end
 
   def create
-    @@stages[self.id] = Stage.new(self.name, self.artist, self.id)
-    # Stage.sort
+    duplicated = ""
+    artist = self.artist
+    @@stages.values.each do |stage|
+      if artist == stage.artist
+        duplicated = "this artist is already assigned to a stage."
+      end
+    end
+    if duplicated == ""
+      # binding.pry
+      @@stages[self.id] = Stage.new(self.name, self.artist, self.id)
+    end
+    duplicated
   end
 
   def delete
@@ -48,4 +58,10 @@ class Stage
   def artists
     Artist.find_by_stage(self.id)
   end
+
+  # def self.duplicated
+  #   array = @@albums.sort_by {|key, val| val.name}
+  #   @@albums = Hash[array.map { |key, val | [key,val]}]
+  # end
+
 end

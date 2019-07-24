@@ -1,6 +1,7 @@
 require('pry')
 
 class Artist
+  # belongs_to :stage
   attr_reader :id
   attr_accessor :name, :stage_id
   @@artists = {}

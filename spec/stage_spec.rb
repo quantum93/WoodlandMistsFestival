@@ -13,16 +13,6 @@ describe '#Stage' do
     end
   end
 
-  describe('#create') do
-    it("creates a stage") do
-      stage = Stage.new("Epic Hall one", "Ben", nil)
-      stage.create()
-      stage2 = Stage.new("Epic Hall two", "Ben", nil)
-      stage2.create()
-      expect(Stage.all).to(eq([stage, stage2]))
-    end
-  end
-
   describe('#==') do # This check whether the duplicated stage assignment for same artist or not.
     it("is the same stage if it has the same attributes as another stage") do
       stage = Stage.new("Epic Hall one", "Ben", nil)
@@ -71,4 +61,14 @@ describe '#Stage' do
       end
     end
 
+    describe('#create') do
+      it("creates a stage") do
+        stage = Stage.new("Epic Hall one", "Ben", nil)
+        stage.create()
+        stage2 = Stage.new("Epic Hall two", "Ben", nil)
+        stage2.create()
+        expect(Stage.all).to(eq([stage, stage2]))
+      end
+    end
+    
 end

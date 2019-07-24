@@ -30,7 +30,7 @@ Start with unit tests and get all tests passing before starting on integration t
 | it passes all test for stage class with minimum requirement|
 | it passes all test for artist class with minimum requirement|
 | write User interface logic at view folder (erb files)|
-| 
+| apply belongs_to for class |
 
 
 
